@@ -6,18 +6,18 @@ export default {
   ],
   tabBar: {
     list: [{
-      //'iconPath': 'resource/latest.png',
-      //'selectedIconPath': 'resource/lastest_on.png',
+      iconPath: 'images/my-daka.png',
+      selectedIconPath: 'images/my-daka-selected.png',
       pagePath: 'pages/index/index',
       text: '同城发现'
     }, {
-      //'iconPath': 'resource/hotest.png',
-     // 'selectedIconPath': 'resource/hotest_on.png',
+      iconPath: 'images/explore.png',
+      selectedIconPath: 'images/explore-selected.png',
       pagePath: 'pages/create/index',
       text: '创建'
     }, {
-     // 'iconPath': 'resource/node.png',
-     // 'selectedIconPath': 'resource/node_on.png',
+      iconPath: 'images/self.png',
+      selectedIconPath: 'images/self-selected.png',
       pagePath: 'pages/my/index',
       text: '我的'
     }],
