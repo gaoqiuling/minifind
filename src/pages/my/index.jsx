@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Taro from '@tarojs/taro'
 import { Block, View, Image, OpenData, Button } from '@tarojs/components'
 // import AddTip from '../../components/add-tip'
 import './index.styl'
@@ -35,7 +36,11 @@ export default class Index extends Component {
   }
 
   showTip = () => {
-    // AddTip.show();
+    Taro.showToast({
+      icon: 'none',
+      title: '开发中，敬请期待',
+      duration: 2000
+    });
   }
 
 
@@ -52,7 +57,7 @@ export default class Index extends Component {
             {isLogin && (
               <View className='open-info'>
                 <View className='avatar'>
-                  <OpenData type='userAvatarUrl' />
+                  <OpenData type='userAvatarUrl' />``
                 </View>
                 <View className='name_phone'>
                   <OpenData className='name' type='userNickName' />
@@ -79,13 +84,13 @@ export default class Index extends Component {
           </View>
           {isLogin ? (
             <Block>
-              <View className='section line' onClick={this.showTip}>
+              <View className='section' onClick={this.showTip}>
                 <View className='set-icon icon' />绑定穿戴设备
                 {/* <AddTip /> */}
               </View>
               <View className='section line'>
+                <Button className='feedback-btn' openType='contact' />
                 <View className='feedback-icon icon' />客服中心
-                {/* <Button className='feedback-btn' openType='contact' /> */}
               </View>
             </Block>
           ) : (

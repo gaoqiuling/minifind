@@ -5,15 +5,18 @@ import './index.styl'
 
 export default class Index extends Component {
 
-  componentWillMount () { }
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() { }
 
-  componentDidMount () { }
+  componentDidMount() { }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
   go = () => {
     Taro.navigateTo({
@@ -21,7 +24,7 @@ export default class Index extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <View className='index'>
         <Text onClick={this.go}>创造页</Text>

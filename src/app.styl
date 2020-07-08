@@ -1,0 +1,623 @@
+// 去除prefix
+vendors = official
+
+@keyframes showCurReply
+  0%
+    background rgba(255, 221, 87, .15)
+
+  66%
+    background rgba(255, 221, 87, .15)
+
+  90%
+    background unset
+
+  100%
+    background unset
+
+page
+  height 100%
+  overflow-x hidden
+
+.container
+  overflow-x hidden
+
+view
+  box-sizing border-box
+
+.over-txt
+  overflow hidden
+  white-space nowrap
+  text-overflow ellipsis
+
+.over-double-txt
+  display -webkit-box
+  -webkit-line-clamp 2
+  -webkit-box-orient vertical
+  overflow hidden
+  text-overflow ellipsis
+
+button
+  margin 0
+  padding 0
+  background none
+  border-radius 0
+
+  &::after, &[plain]
+    border none
+
+  &:hover
+    background none
+
+  &:active
+    background none
+
+.login-btn
+  width 186px
+  height 40px
+  color #ffffff
+  font-size 16px
+  line-height 40px
+  border-radius 100px
+  box-shadow 0 2px 6px 0 rgba(47, 90, 255, .2)
+  background-image linear-gradient(83deg, rgb(47, 90, 255), rgb(0, 147, 255))
+
+.g-arrow
+  display inline-block
+  width 8px
+  height 8px
+  border-width 2px 2px 0 0
+  border-style solid
+  border-color #fff
+  transform matrix(.642788, .766044, -.642788, .766044, 0, 0)
+
+  &.lighter
+    border-width 1px 1px 0 0
+
+  &.sm
+    width 6px
+    height 6px
+
+  &.right
+    &.sm
+      transform matrix(.707107, .707107, -.707107, .707107, 0, 0)
+
+  &.down
+    transform matrix(-.866025, .7, -.866025, -.7, 0, 0)
+
+.g-tab-bar
+  display flex
+  width 100%
+  background #fff
+  box-shadow 0 5px 8px 0 rgba(0, 0, 0, .02)
+
+  &.fixed
+    position fixed
+    top 0
+    left 0
+    margin 0
+    z-index 100
+
+  .tab-item
+    box-sizing border-box
+    position relative
+    width 50%
+    height 50px
+    color #95a1af
+    font-size 14px
+    font-weight normal
+    line-height 50px
+    text-align center
+    font-family PingFangSC-Regular
+
+    &:not(:first-child)
+      &::before
+        content ''
+        position absolute
+        top 50%
+        left -2px
+        display block
+        width 2px
+        height 12px
+        transform translateY(-50%)
+        background-color #ecedf2
+
+    &.active
+      color #2f5aff
+      font-weight 600
+
+      &::after
+        content ''
+        position absolute
+        left 50%
+        bottom 0
+        display block
+        width 20px
+        height 2px
+        transform translateX(-50%)
+        border-radius 100px
+        background-color #2f5aff
+
+.g-intro-text-margin
+  padding 15px 0 10px
+
+// ---- comment ---
+.g-comment-wrapper
+  padding-bottom 10px
+  border-radius 6px
+  box-shadow 0 2px 8px 0 rgba(0, 0, 0, .05)
+  background #fff
+
+.g-comment-card
+  position relative
+  padding 18px
+  padding-bottom 10px
+
+  // border-top-left-radius 6px
+  // border-top-right-radius 6px
+  .g-comment-select-icon
+    position absolute
+    top 8px
+    right 40px
+    width 59px
+    height 49px
+
+  .g-comment-card-header
+    display flex
+    justify-content space-between
+    margin-bottom 26px
+
+  .g-comment-options-groups
+    box-sizing content-box
+    position relative
+    top 8px
+    margin 0
+    // 使点击区域变大
+    margin-right -10px
+    padding 0 10px
+    width 6px
+    height 17px
+    background-image url('//n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png') // n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png)
+    background-size contain
+    background-repeat no-repeat
+    background-position-x center
+
+    &:hover
+      background-image url('//n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png') // n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png)
+      background-size contain
+      background-repeat no-repeat
+      background-position-x center
+
+  .g-comment-user-box
+    position relative
+    display flex
+    height 40px
+    flex 1
+
+  .g-comment-user-avatar
+    margin-right 10px
+    width 40px
+    height 40px
+    border-radius 50%
+
+  .g-comment-user-name
+    color #2f3742
+    font-size 14px
+    font-weight 500
+    line-height 20px
+
+  .g-comment-time
+    position absolute
+    bottom 0
+    color #95a1af
+    font-size 12px
+
+  .g-comment-task-info
+    margin-top 25px
+    padding 10px
+    color #687583
+    font-size 15px
+    font-weight 300
+    line-height 21px
+    background #f2f3f7
+    border-radius 2px
+    word-wrap break-word
+    text-align justify
+
+  .g-comment-content-cheat
+    position relative
+    right 12px
+    width 345px
+    height 331px
+
+  .g-comment-content-text
+    margin-top 15px
+    color #2f3742
+    font-size 15px
+    font-weight 300
+    line-height 1.73
+    word-wrap break-word
+    text-align justify
+
+  .g-comment-img-box
+    position relative
+    margin-top 15px
+
+  .g-comment-card-footer
+    display flex
+    justify-content flex-end
+    margin-top 20px
+    text-align right
+
+  .g-comment-footer-btn
+    display flex
+    align-items center
+    margin 0
+    padding 0
+    font-size 13px
+
+    &:not(:last-child)
+      margin-right 30px
+
+    &::before, .like-icon
+      content ''
+      position relative
+      // top 3px
+      display inline-block
+      margin-right 4px
+      width 18px
+      height 18px
+      background-size contain
+      background-repeat no-repeat
+
+  .g-comment-share-btn
+    color #687583
+
+    &::before
+      background-image url('https://n1image.hjfile.cn/res7/2018/12/28/d270a066cf100125507622b8c5c35694.png')
+
+  .g-comment-add-btn
+    color #2f5aff
+
+    &::before
+      background-image url('https://n1image.hjfile.cn/res7/2019/01/04/3e0f2eb8685d8225c4b7f2d67baaf056.png')
+
+  .g-comment-count-btn
+    color #687583
+
+    &::before
+      background-image url('https://n1image.hjfile.cn/res7/2018/12/28/84669fca6a31416970d863502a62d886.png')
+
+  .g-comment-like-btn
+    position relative
+    display flex
+    color #687583
+    text-align center
+
+    .like-animation
+      position absolute
+      left 50%
+      bottom 0
+      z-index 100
+      transform translate(-50%)
+
+    .like-icon
+      width 18px
+      height 18px
+      background url('https://n1image.hjfile.cn/res7/2019/01/10/2bd31e6de31950bc7e07e77038821243.png') // n1image.hjfile.cn/res7/2019/01/10/2bd31e6de31950bc7e07e77038821243.png)
+      background-size 18px auto
+
+    .like-btn
+      display flex
+      align-items center
+      width 100%
+      color #687583
+      font-size 13px
+
+      &.like
+        color #2f5aff
+
+        .like-icon
+          background url('https://n1image.hjfile.cn/res7/2019/01/10/3d9866d60cd65f9c2ef2eeeba9ddc874.png') // n1image.hjfile.cn/res7/2019/01/10/3d9866d60cd65f9c2ef2eeeba9ddc874.png)
+          background-size 18px auto
+
+.g-like-list
+  position relative
+  display flex
+  margin 10px
+  padding 8px
+  background rgba(247, 248, 250, 1)
+  border-radius 3px
+
+  &.line
+    margin 0
+    padding 0 18px
+    background rgba(0, 0, 0, 0)
+
+    &::after
+      // top 20px
+      content ''
+      position relative
+      display block
+      width 100%
+      height 1px
+      background #ecedf2
+
+  .g-like-icon
+    position relative
+    top 2px
+    width 15px
+    height 15px
+    flex-shrink 0
+
+  .g-like-box
+    margin-left 9px
+    width 100%
+    font-size 12px
+    word-wrap break-all
+
+  .g-like-name
+    display inline
+    color #95A1AF
+
+  &+.g-replies-list
+    .g-replies-list-wrapper
+      padding-top 0
+
+// ---- reply ---
+.g-replies-list-wrapper
+  padding 10px 0
+
+  &.ml-40
+    margin-left 40px
+
+.g-replies-list
+  position relative
+
+  // background-color #f6f7f9
+  .g-reply-box
+    padding 20px 18px
+
+    &.cur
+      transition background 1s ease
+      animation showCurReply 3s forwards
+
+  .g-reply-content-text
+    color #687583
+    font-size 14px
+    font-weight 300
+    word-break break-all
+    text-align justify
+
+    &.ml-40
+      margin-left 40px
+
+  .g-reply-img-box
+    position relative
+    margin-top 15px
+
+  .g-reply-user-name-box
+    display flex
+    align-items center
+
+  .g-reply-user
+    position relative
+    display flex
+    align-items center
+    margin-bottom 5px
+
+    .g-reply-user-avatar
+      margin-right 10px
+      width 30px
+      height 30px
+      border-radius 50%
+
+    .g-reply-user-name
+      display flex
+      margin-right 5px
+      color #2f3742
+      font-size 13px
+      font-weight 500
+
+      .sig
+        color rgba(104, 117, 131, 1)
+
+      .name
+        color rgba(47, 55, 66, 1)
+
+    .g-reply-user-flag
+      width 26px
+      height 14px
+      color #ff4962
+      font-size 10px
+      line-height 14px
+      border-radius 2px
+      background-color rgba(255, 73, 98, .2)
+      text-align center
+
+    .g-reply-user-time
+      color #687583
+      font-size 10px
+
+  .g-reply-options-groups
+    box-sizing content-box
+    position absolute
+    top 8px
+    right 0
+    margin 0
+    // 使点击区域变大
+    margin-right -10px
+    padding 0 10px
+    width 6px
+    height 17px
+    background-image url('//n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png') // n1image.hjfile.cn/res7/2018/10/29/041a36a769e557f6322e0b1d63242b82.png)
+    background-size contain
+    background-repeat no-repeat
+    background-position-x center
+
+.g-reply-list-see-more
+  margin 0
+  margin 20px 0
+  padding 0
+  color #95a1af
+  font-size 14px
+  font-weight normal
+  line-height normal
+  font-family PingFangSC
+  text-align center
+
+  .g-arrow
+    position relative
+    top -1px
+    border-color #95a1af
+
+.overflow-box-switch-btn
+  position relative
+  padding 15px 0 0
+  width 100%
+  color #2f5aff
+  font-size 14px
+  z-index 11
+  text-align center
+
+  .down, .up
+    display flex
+    justify-content center
+    align-items center
+
+    &::after
+      content ''
+      position relative
+      left 5px
+      display inline-block
+      width 16px
+      height 16px
+      background url('https://n1image.hjfile.cn/res7/2019/03/06/f54d8e6d4ab9f3680c44ad95f909b846.png') no-repeat
+      background-size 16px 16px
+
+  .up
+    &::after
+      transform rotate(180deg)
+
+.overflow-box
+  position relative
+  margin-bottom 9px
+  min-height 70px
+  transition height .3s ease
+
+.box-height-overflow
+  overflow hidden
+
+  &:after
+    content ''
+    position absolute
+    left 0
+    bottom 0
+    display block
+    width 100%
+    height 30px
+    background linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1))
+
+.page-unlogin
+  display flex
+  flex-direction column
+  align-items center
+  text-align center
+
+  image
+    display block
+    margin auto
+    width 118px
+    height 118px
+
+  .txt
+    margin 20px 0
+    color #95a1af
+    font-size 16px
+
+.discover-daka-card
+  position relative
+  margin 10px 10px 0
+  padding 17px 12px 0
+  height 126px
+  border-radius 6px
+  background-color #fff
+
+  .discover-daka-name
+    margin-bottom 11px
+    width 55%
+    height 42px
+    color #2F3742
+    font-size 15px
+    font-weight 900
+    line-height 21px
+
+  image
+    position absolute
+    top 17px
+    right 12px
+    width 125px
+    height 70px
+    border-radius 3px
+
+  .discover-daka-info
+    display flex
+    align-items center
+    color #95A1AF
+    font-size 12px
+
+    .line
+      margin 0 5px
+
+  .tags
+    display flex
+    align-items center
+    margin-top 7px
+
+    .tag
+      margin-right 5px
+      padding 0 5px
+      height 14px
+      color #687583
+      font-size 10px
+      line-height 14px
+      background-color #EFF1F3
+      border-radius 4px
+      text-align center
+
+.page-placeholder
+  .type-image
+    width 100%
+    height 150px
+    background-color #F4F4F4
+    border-radius 5px
+
+  .type-line-max
+    width 100%
+    height 25px
+    background-color #F4F4F4
+    border-radius 17px
+
+  .type-line-half
+    width 50%
+    height 25px
+    background-color #F4F4F4
+    border-radius 17px
+
+  .type-line-more-half
+    width 70%
+    height 25px
+    background-color #F4F4F4
+    border-radius 17px
+
+  .type-avatar
+    width 44px
+    height 44px
+    background-color #F4F4F4
+    border-radius 50%
+
+  .type-btn
+    margin auto
+    width 184px
+    height 40px
+    background-color #F4F4F4
+    border-radius 20px
